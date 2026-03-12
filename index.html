@@ -1,236 +1,268 @@
-export default function TomMaintenanceV2() {
-  const services = [
-    {
-      title: "Builders Cleans",
-      text: "Structured post-build cleaning for plots, apartments and handover-ready spaces.",
-    },
-    {
-      title: "Final Sparkle Cleans",
-      text: "Detail-focused finishing cleans for presentation, inspections and handover.",
-    },
-    {
-      title: "Welfare & Site Cabin Cleaning",
-      text: "Clean, compliant welfare areas including cabins, kitchens, washrooms and site offices.",
-    },
-    {
-      title: "Compound & External Area Cleaning",
-      text: "Tidy, presentable external welfare zones, compound surrounds and access points.",
-    },
-  ];
 
-  const badges = [
-    "CSCS Card Holders",
-    "RAMS Provided",
-    "Midlands Coverage",
-    "Contractor-Focused",
-  ];
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tom Maintenance | Construction Site & Welfare Cleaning | Leicestershire & Midlands</title>
+  <meta name="description" content="Construction site cleaning, welfare unit cleaning, builders cleans & sparkle cleans for main contractors, housebuilders and civils. Leicestershire & Midlands." />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-  const highlights = [
-    {
-      label: "Built for",
-      value: "Housebuilders, main contractors & regional sites",
-    },
-    {
-      label: "Approach",
-      value: "Fast communication, clean presentation, no domestic work",
-    },
-    {
-      label: "Coverage",
-      value: "Leicestershire, East Midlands & surrounding areas",
-    },
-  ];
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="#top" aria-label="Tom Maintenance home">
+        <span class="brand-mark">TM</span>
+        <span class="brand-text">
+          <span class="brand-name">Tom Maintenance</span>
+          <span class="brand-tag">Construction Cleaning</span>
+        </span>
+      </a>
 
-  const contactItems = [
-    { label: "Phone", value: "Add your number", href: "tel:+447000000000" },
-    { label: "Email", value: "info@tommaintenance.co.uk", href: "mailto:info@tommaintenance.co.uk" },
-    { label: "Coverage", value: "Leicestershire & Midlands" },
-  ];
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#compliance">Compliance</a>
+        <a href="#coverage">Coverage</a>
+        <a class="btn btn-small" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  return (
-    <div className="min-h-screen bg-[#070b14] text-white overflow-hidden">
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.22),transparent_28%),radial-gradient(circle_at_15%_20%,rgba(59,130,246,0.12),transparent_25%),linear-gradient(180deg,#070b14_0%,#08101d_45%,#060911_100%)]" />
-        <div className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(rgba(96,165,250,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(96,165,250,0.18)_1px,transparent_1px)] [background-size:42px_42px]" />
-        <div className="absolute -top-24 right-0 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl animate-pulse" />
-        <div className="absolute bottom-10 left-8 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl animate-pulse" />
-      </div>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Construction sites • Welfare units • Builders & sparkle cleans</p>
+          <h1>Reliable site cleaning for contractors who need it done right.</h1>
+          <p class="lead">
+            We support <strong>housebuilders</strong>, <strong>main contractors</strong> and <strong>civils / infrastructure</strong>
+            with practical, compliant cleaning on live sites and at handover.
+          </p>
 
-      <header className="sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl bg-[#070b14]/75">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div>
-            <div className="text-xl font-semibold tracking-[0.2em] text-white">TOM MAINTENANCE</div>
-            <div className="text-xs uppercase tracking-[0.35em] text-blue-300/80">
-              Construction & Welfare Cleaning
-            </div>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Request a callback</a>
+            <a class="btn btn-ghost" href="#services">See services</a>
           </div>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <span className="rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-200">
-              CSCS Card Holders
-            </span>
-            <a
-              href="tel:+447000000000"
-              className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90 transition hover:border-blue-400/40 hover:bg-blue-500/10"
-            >
-              Add phone number
-            </a>
+          <ul class="hero-bullets">
+            <li>Fast response for small & regional contractors</li>
+            <li>RAMS / COSHH-ready approach (no shortcuts)</li>
+            <li>Leicestershire & Midlands coverage</li>
+          </ul>
+
+          <div class="note">
+            <strong>Note:</strong> We provide <strong>construction & contractor cleaning only</strong> (no domestic work).
           </div>
         </div>
-      </header>
 
-      <main>
-        <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-16 pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:pb-24 lg:pt-24">
-          <div className="relative">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-100 shadow-[0_0_30px_rgba(37,99,235,0.16)]">
-              Site-ready cleaning for contractors, developers and regional construction teams
+        <div class="hero-card" role="region" aria-label="Quick facts">
+          <h2 class="card-title">Quick facts</h2>
+          <div class="facts">
+            <div class="fact">
+              <div class="fact-label">Core work</div>
+              <div class="fact-value">Welfare + site cleaning</div>
             </div>
-
-            <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-              Sharp, modern cleaning support for
-              <span className="bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-500 bg-clip-text text-transparent"> active construction sites</span>.
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              TOM Maintenance delivers builders cleans, final sparkle cleans, welfare cleaning and compound support for sites that need a contractor-ready service, fast communication and a professional finish.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              {badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 transition hover:border-blue-400/30 hover:bg-blue-500/10"
-                >
-                  {badge}
-                </span>
-              ))}
+            <div class="fact">
+              <div class="fact-label">Typical clients</div>
+              <div class="fact-value">Housebuilders, MCs, civils</div>
             </div>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="tel:+447000000000"
-                className="rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-4 text-base font-semibold text-slate-950 shadow-[0_15px_40px_rgba(56,189,248,0.25)] transition hover:scale-[1.02]"
-              >
-                Call now
-              </a>
-              <a
-                href="#contact"
-                className="rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-base font-semibold text-white transition hover:border-blue-400/40 hover:bg-blue-500/10"
-              >
-                Request site quote
-              </a>
+            <div class="fact">
+              <div class="fact-label">Coverage</div>
+              <div class="fact-value">Leicestershire / Midlands</div>
+            </div>
+            <div class="fact">
+              <div class="fact-label">Email</div>
+              <div class="fact-value"><a href="mailto:info@tommaintenance.co.uk">info@tommaintenance.co.uk</a></div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-blue-500/20 to-cyan-400/5 blur-2xl" />
-            <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20 backdrop-blur-xl">
-              <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-5">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.28em] text-blue-200/80">Quick facts</p>
-                  <h2 className="mt-2 text-2xl font-semibold text-white">Contractor-ready profile</h2>
-                </div>
-                <div className="rounded-2xl border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-100">
-                  Midlands
-                </div>
-              </div>
+          <hr class="divider" />
 
-              <div className="space-y-5">
-                {highlights.map((item) => (
-                  <div key={item.label} className="rounded-2xl border border-white/8 bg-slate-950/30 p-4">
-                    <div className="text-xs uppercase tracking-[0.25em] text-blue-200/70">{item.label}</div>
-                    <div className="mt-2 text-base leading-7 text-slate-200">{item.value}</div>
-                  </div>
-                ))}
-              </div>
+          <p class="small">
+            If you’re a Site Manager or Procurement, send the site postcode + scope and we’ll respond with availability.
+          </p>
 
-              <div className="mt-6 rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-4 text-sm leading-7 text-cyan-50">
-                We work with a contractor-first mindset: clear scope, clean presentation, practical communication and a service that fits live site requirements.
-              </div>
-            </div>
-          </div>
-        </section>
+          <a class="btn btn-block" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="group rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-400/35 hover:bg-blue-500/[0.07]"
-              >
-                <div className="mb-4 h-11 w-11 rounded-2xl bg-gradient-to-br from-blue-500/30 to-cyan-400/20 ring-1 ring-white/10" />
-                <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{service.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Focused on real site needs: welfare hygiene, safe access, and clean handovers.</p>
+        </div>
 
-        <section className="mx-auto grid max-w-7xl gap-6 px-6 py-16 lg:grid-cols-2 lg:px-8">
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
-            <p className="text-sm uppercase tracking-[0.3em] text-blue-200/80">Why TOM Maintenance</p>
-            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-              A cleaner, sharper contractor experience.
-            </h2>
-            <div className="mt-6 space-y-4 text-base leading-8 text-slate-300">
-              <p>
-                This business is positioned for construction and welfare cleaning only. No domestic work, no mixed messaging, no diluted offer.
-              </p>
-              <p>
-                The goal is simple: make it easier for site teams and regional contractors to get a responsive, presentable and professional cleaning service when it matters.
-              </p>
-              <p>
-                Small and regional sites welcome. Scope-based pricing, practical communication and project-specific RAMS where required.
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-400/5 p-8">
-            <p className="text-sm uppercase tracking-[0.3em] text-blue-200/80">Compliance</p>
-            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-              Site-ready and structured.
-            </h2>
-            <ul className="mt-6 space-y-4 text-base leading-8 text-slate-200">
-              <li>• CSCS card holders</li>
-              <li>• Health & Safety trained</li>
-              <li>• RAMS provided per project scope</li>
-              <li>• COSHH-aware working methods</li>
-              <li>• Contractor onboarding and site inductions followed</li>
-              <li>• Public Liability insurance status can be added here</li>
+        <div class="cards">
+          <article class="card">
+            <h3>Construction site cleaning</h3>
+            <ul>
+              <li>Live-site cleaning support</li>
+              <li>Traffic areas, access routes, stairs & landings</li>
+              <li>Waste segregation support (as instructed by site)</li>
+              <li>Dust control & wipe-downs in key zones</li>
             </ul>
+          </article>
+
+          <article class="card">
+            <h3>Welfare unit cleaning</h3>
+            <ul>
+              <li>Canteens, drying rooms, offices, meeting rooms</li>
+              <li>Toilets, showers and wash stations</li>
+              <li>Consumables refill (if provided by site)</li>
+              <li>Regular schedule or call-outs</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Builders / sparkle cleans</h3>
+            <ul>
+              <li>Plot/area cleans ahead of inspections</li>
+              <li>Pre-handover sparkle cleans</li>
+              <li>Touch-point cleaning (frames, sills, doors)</li>
+              <li>Snag-friendly approach (careful finish protection)</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="strip">
+          <div>
+            <h3 class="strip-title">How we work</h3>
+            <p class="strip-text">
+              You tell us the site rules and scope. We operate to your induction requirements and follow
+              safe methods, with RAMS/COSHH awareness and correct PPE.
+            </p>
           </div>
-        </section>
+          <a class="btn btn-ghost" href="#compliance">See compliance</a>
+        </div>
+      </div>
+    </section>
 
-        <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8" id="contact">
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 shadow-2xl shadow-black/20">
-            <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-blue-200/80">Contact</p>
-                <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-                  Ready for the next site conversation.
-                </h2>
-                <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
-                  Send the site postcode, project type and required cleaning stage. We’ll review scope, confirm availability and discuss next steps.
-                </p>
-              </div>
+    <!-- COMPLIANCE -->
+    <section id="compliance" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Compliance</h2>
+          <p>Built for UK construction sites: onboarding, induction, RAMS and COSHH.</p>
+        </div>
 
-              <div className="grid gap-4 md:grid-cols-3">
-                {contactItems.map((item) => (
-                  <div key={item.label} className="rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5">
-                    <div className="text-xs uppercase tracking-[0.25em] text-blue-200/70">{item.label}</div>
-                    {item.href ? (
-                      <a href={item.href} className="mt-3 block text-lg font-medium text-white hover:text-blue-300">
-                        {item.value}
-                      </a>
-                    ) : (
-                      <div className="mt-3 text-lg font-medium text-white">{item.value}</div>
-                    )}
-                  </div>
-                ))}
-              </div>
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Site readiness</h3>
+            <ul class="ticks">
+              <li><strong>CSCS:</strong> Green card process (CITB test to be booked)</li>
+              <li><strong>RAMS:</strong> Method statements available per site scope</li>
+              <li><strong>COSHH:</strong> Product assessments and safe storage/handling</li>
+              <li><strong>Insurance:</strong> Public Liability / Employers’ Liability (as required)</li>
+              <li><strong>Induction:</strong> We follow contractor onboarding & site rules</li>
+            </ul>
+            <p class="small muted">
+              We do not claim compliance items as “completed” unless they are confirmed and documented.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Accreditations</h3>
+            <ul class="ticks">
+              <li><strong>CHAS:</strong> in progress (sole trader route)</li>
+              <li>We can work to your SSOW / permit system if applicable</li>
+              <li>PPE and signage aligned to site requirements</li>
+              <li>Working around other trades with minimal disruption</li>
+            </ul>
+            <div class="callout">
+              <strong>Contractor-only:</strong> We work with contractors and developers – no domestic cleaning.
             </div>
           </div>
-        </section>
-      </main>
-    </div>
-  );
-}
+        </div>
+      </div>
+    </section>
+
+    <!-- COVERAGE -->
+    <section id="coverage" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Coverage</h2>
+          <p>Leicestershire and the Midlands. Small and regional sites welcome.</p>
+        </div>
+
+        <div class="coverage">
+          <div class="coverage-box">
+            <h3>Primary area</h3>
+            <p>Leicester • Loughborough • Hinckley • Market Harborough</p>
+            <p class="small muted">Plus nearby towns and industrial areas</p>
+          </div>
+          <div class="coverage-box">
+            <h3>Wider Midlands</h3>
+            <p>Derby • Nottingham • Coventry • Birmingham (project dependent)</p>
+            <p class="small muted">Travel agreed per site and schedule</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Send the site postcode and what you need cleaned. We’ll reply with availability.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="panel">
+            <h3>Direct</h3>
+            <p class="contact-line"><span>Email</span> <a href="mailto:info@tommaintenance.co.uk">info@tommaintenance.co.uk</a></p>
+            <p class="contact-line"><span>Phone</span> <a href="tel:+447000000000">+44 7000 000000</a></p>
+            <p class="small muted">Replace the phone number above with your real number.</p>
+
+            <div class="mini">
+              <h4>What to include</h4>
+              <ul>
+                <li>Site name + postcode</li>
+                <li>Welfare / plots / live-site areas</li>
+                <li>Frequency (daily/weekly/call-out)</li>
+                <li>Start date + site hours</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Message template</h3>
+            <p class="small muted">Click to open your email with a pre-filled request.</p>
+            <a class="btn btn-block" href="mailto:info@tommaintenance.co.uk?subject=Site%20cleaning%20enquiry&body=Site%20name%3A%0ASite%20postcode%3A%0AScope%20(welfare%2Fplots%2Flive-site)%3A%0AFrequency%3A%0AStart%20date%3A%0ASite%20hours%3A%0AAny%20site%20rules%20or%20induction%20requirements%3A%0A">
+              Email enquiry
+            </a>
+
+            <div class="mini">
+              <h4>Business details</h4>
+              <p class="small">
+                Trading name: <strong>Tom Maintenance</strong><br/>
+                Services: <strong>Construction site & welfare cleaning</strong><br/>
+                Area: <strong>Leicestershire / Midlands</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p class="small muted">
+            © <span id="year"></span> Tom Maintenance. Construction cleaning only.
+          </p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
