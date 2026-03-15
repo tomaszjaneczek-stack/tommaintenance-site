@@ -9,7 +9,10 @@
     content="Construction site cleaning, welfare unit cleaning, builders cleans and sparkle cleans for housebuilders, main contractors and civils / infrastructure contractors across Leicestershire and the Midlands."
   />
   <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#08111f" />
+  <meta property="og:title" content="Tom Maintenance | Construction Cleaning" />
+  <meta property="og:description" content="Contractor-focused construction site cleaning, welfare unit cleaning, builders cleans and sparkle cleans across Leicestershire and the Midlands." />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,25 +23,25 @@
 
   <style>
     :root{
-      --bg:#07101c;
-      --bg2:#0b1628;
-      --panel:#0f1b31;
-      --panel-2:#13213a;
-      --text:#eef4ff;
-      --muted:#b8c6e3;
-      --muted-2:#8ea3cb;
+      --bg:#08111f;
+      --bg-soft:#0d1830;
+      --panel:#101b31;
+      --panel-2:#13213c;
+      --text:#edf4ff;
+      --muted:#b9c7e3;
+      --muted-2:#8ea4cc;
+      --brand:#62e7d5;
+      --brand-2:#6da9ff;
+      --brand-dark:#08111f;
       --line:rgba(255,255,255,.10);
       --line-2:rgba(255,255,255,.16);
-      --brand:#64e6d7;
-      --brand-2:#6ea9ff;
-      --brand-dark:#07101c;
       --success:#25D366;
       --success-2:#128C7E;
-      --phone:#67a9ff;
-      --phone-2:#2a67ea;
-      --shadow:0 20px 50px rgba(0,0,0,.34);
+      --phone:#6aa9ff;
+      --phone-2:#2c66e8;
+      --shadow:0 22px 55px rgba(0,0,0,.35);
       --shadow-soft:0 12px 28px rgba(0,0,0,.22);
-      --radius:22px;
+      --radius:24px;
       --radius-sm:16px;
       --max:1180px;
       --font:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -51,20 +54,25 @@
       font-family:var(--font);
       color:var(--text);
       background:
-        radial-gradient(1000px 650px at 10% 0%, rgba(100,230,215,.10), transparent 58%),
-        radial-gradient(900px 560px at 100% 0%, rgba(110,169,255,.14), transparent 52%),
-        linear-gradient(180deg, #040914 0%, var(--bg) 26%, #08111f 100%);
+        radial-gradient(1050px 680px at 10% 0%, rgba(98,231,213,.11), transparent 58%),
+        radial-gradient(900px 560px at 100% 0%, rgba(109,169,255,.13), transparent 52%),
+        linear-gradient(180deg, #050a14 0%, var(--bg) 28%, #07111f 100%);
       line-height:1.55;
     }
 
     a{color:inherit}
+    img{max-width:100%;display:block}
     button{font:inherit}
-    .container{width:min(var(--max), calc(100% - 40px)); margin:0 auto}
+
+    .container{
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+    }
 
     .site-header{
       position:sticky;
       top:0;
-      z-index:100;
+      z-index:120;
       backdrop-filter:saturate(160%) blur(12px);
       background:rgba(5,11,22,.74);
       border-bottom:1px solid var(--line);
@@ -99,9 +107,23 @@
       box-shadow:var(--shadow-soft);
     }
 
-    .brand-text{display:flex; flex-direction:column; line-height:1.05}
-    .brand-name{font-size:16px; font-weight:800}
-    .brand-tag{margin-top:4px; font-size:12px; color:var(--muted-2)}
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+
+    .brand-name{
+      font-size:16px;
+      font-weight:800;
+      letter-spacing:.1px;
+    }
+
+    .brand-tag{
+      margin-top:4px;
+      font-size:12px;
+      color:var(--muted-2);
+    }
 
     .nav{
       display:flex;
@@ -124,24 +146,29 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      text-align:center;
       gap:8px;
       min-height:48px;
       padding:12px 18px;
       border-radius:14px;
-      text-decoration:none;
       border:1px solid transparent;
+      text-decoration:none;
+      text-align:center;
       font-weight:800;
       letter-spacing:.1px;
-      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
       background:linear-gradient(135deg,var(--brand),var(--brand-2));
       color:var(--brand-dark);
       box-shadow:0 12px 24px rgba(0,0,0,.22);
+      transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
       cursor:pointer;
     }
 
     .btn:hover{transform:translateY(-1px)}
-    .btn-small{min-height:40px; padding:10px 14px; font-size:14px; border-radius:12px}
+    .btn-small{
+      min-height:40px;
+      padding:10px 14px;
+      border-radius:12px;
+      font-size:14px;
+    }
     .btn-nav{color:#071120 !important}
     .btn-ghost{
       background:rgba(255,255,255,.03);
@@ -156,19 +183,25 @@
     .btn-outline{
       background:transparent;
       color:var(--brand);
-      border-color:rgba(100,230,215,.30);
+      border-color:rgba(98,231,213,.30);
       box-shadow:none;
     }
     .btn-outline:hover{
-      background:rgba(100,230,215,.06);
-      border-color:rgba(100,230,215,.52);
+      background:rgba(98,231,213,.06);
+      border-color:rgba(98,231,213,.52);
     }
-    .btn-block{display:flex; width:100%}
+    .btn-block{
+      display:flex;
+      width:100%;
+    }
 
-    .hero{padding:58px 0 24px}
+    .hero{
+      padding:58px 0 28px;
+    }
+
     .hero-grid{
       display:grid;
-      grid-template-columns:1.18fr .82fr;
+      grid-template-columns:1.16fr .84fr;
       gap:24px;
       align-items:start;
     }
@@ -188,10 +221,10 @@
 
     h1{
       margin:18px 0 14px;
-      max-width:14ch;
-      font-size:clamp(34px, 5vw, 60px);
-      line-height:1.02;
-      letter-spacing:-1.12px;
+      max-width:13ch;
+      font-size:clamp(36px, 5vw, 62px);
+      line-height:1.01;
+      letter-spacing:-1.2px;
     }
 
     .lead{
@@ -199,8 +232,9 @@
       max-width:64ch;
       color:var(--muted);
       font-size:17px;
-      line-height:1.78;
+      line-height:1.8;
     }
+
     .lead strong{color:var(--text)}
 
     .cta-row{
@@ -211,9 +245,9 @@
     }
 
     .hero-points{
-      list-style:none;
       margin:0;
       padding:0;
+      list-style:none;
       display:grid;
       gap:10px;
     }
@@ -222,7 +256,7 @@
       position:relative;
       padding-left:28px;
       color:var(--muted);
-      line-height:1.7;
+      line-height:1.72;
     }
 
     .hero-points li::before{
@@ -234,22 +268,24 @@
       height:10px;
       border-radius:999px;
       background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      box-shadow:0 0 0 4px rgba(100,230,215,.10);
+      box-shadow:0 0 0 4px rgba(98,231,213,.10);
     }
 
     .hero-note{
       margin-top:20px;
       padding:16px 18px;
       border-radius:16px;
-      border:1px solid rgba(100,230,215,.18);
-      background:linear-gradient(180deg, rgba(100,230,215,.08), rgba(255,255,255,.02));
+      border:1px solid rgba(98,231,213,.18);
+      background:linear-gradient(180deg, rgba(98,231,213,.08), rgba(255,255,255,.02));
       color:var(--muted);
-      line-height:1.68;
+      line-height:1.7;
     }
 
     .hero-note strong{color:var(--text)}
 
     .hero-card{
+      position:relative;
+      overflow:hidden;
       border:1px solid var(--line);
       border-radius:26px;
       padding:22px;
@@ -257,8 +293,6 @@
         linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)),
         linear-gradient(180deg, rgba(9,20,37,.95), rgba(9,18,32,.96));
       box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
     }
 
     .hero-card::after{
@@ -269,7 +303,7 @@
       right:-42px;
       bottom:-42px;
       border-radius:999px;
-      background:radial-gradient(circle, rgba(110,169,255,.18), transparent 65%);
+      background:radial-gradient(circle, rgba(109,169,255,.18), transparent 65%);
       pointer-events:none;
     }
 
@@ -331,10 +365,13 @@
       color:var(--muted);
     }
 
-    .trust-bar{padding:4px 0 14px}
+    .trust-bar{
+      padding:4px 0 14px;
+    }
+
     .trust-grid{
       display:grid;
-      grid-template-columns:repeat(4, 1fr);
+      grid-template-columns:repeat(4,1fr);
       gap:14px;
     }
 
@@ -360,7 +397,10 @@
       color:var(--muted);
     }
 
-    .section{padding:72px 0}
+    .section{
+      padding:74px 0;
+    }
+
     .section-alt{
       background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
       border-top:1px solid var(--line);
@@ -382,7 +422,7 @@
     .section-head p{
       margin:0;
       font-size:16px;
-      line-height:1.78;
+      line-height:1.8;
       color:var(--muted);
     }
 
@@ -398,7 +438,8 @@
     .panel,
     .coverage-box,
     .contact-card,
-    .message-card{
+    .message-card,
+    .proof-strip{
       background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.025));
       border:1px solid var(--line);
       border-radius:22px;
@@ -410,7 +451,8 @@
     .panel h3,
     .coverage-box h3,
     .contact-card h3,
-    .message-card h3{
+    .message-card h3,
+    .proof-strip h3{
       margin:0 0 12px;
       font-size:21px;
       line-height:1.2;
@@ -456,7 +498,7 @@
       position:relative;
       padding-left:28px;
       color:var(--muted);
-      line-height:1.7;
+      line-height:1.72;
     }
 
     .ticks li::before{
@@ -471,16 +513,48 @@
     .ticks strong{color:var(--text)}
 
     .panel-highlight{
-      border-color:rgba(100,230,215,.22);
-      background:linear-gradient(180deg, rgba(100,230,215,.08), rgba(255,255,255,.02));
+      border-color:rgba(98,231,213,.22);
+      background:linear-gradient(180deg, rgba(98,231,213,.08), rgba(255,255,255,.02));
+    }
+
+    .proof-strip{
+      margin-top:18px;
+    }
+
+    .proof-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .proof-item{
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.14);
+    }
+
+    .proof-item strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--text);
+      font-size:14px;
+    }
+
+    .proof-item span{
+      display:block;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
     }
 
     .compliance-note{
       margin-top:18px;
       padding:16px 18px;
       border-radius:18px;
-      border:1px solid rgba(110,169,255,.16);
-      background:rgba(110,169,255,.07);
+      border:1px solid rgba(109,169,255,.16);
+      background:rgba(109,169,255,.07);
       color:var(--muted);
       line-height:1.72;
     }
@@ -540,7 +614,7 @@
       color:var(--muted);
       border-radius:18px;
       padding:16px;
-      line-height:1.75;
+      line-height:1.76;
       white-space:pre-line;
       font-size:15px;
     }
@@ -548,13 +622,6 @@
     .action-stack{
       display:grid;
       gap:10px;
-      margin-top:16px;
-    }
-
-    .inline-actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
       margin-top:16px;
     }
 
@@ -585,11 +652,34 @@
       border-top:1px solid var(--line);
     }
 
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      align-items:start;
+    }
+
     .footer p{
       margin:0;
       color:var(--muted);
       font-size:13px;
-      line-height:1.65;
+      line-height:1.7;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:8px;
+      justify-items:end;
+    }
+
+    .footer-links a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:13px;
+    }
+
+    .footer-links a:hover{
+      color:var(--text);
     }
 
     .floating-btn{
@@ -657,8 +747,13 @@
       .cards-2,
       .grid-2,
       .coverage,
-      .contact-grid{
+      .contact-grid,
+      .footer-grid{
         grid-template-columns:1fr;
+      }
+
+      .proof-grid{
+        grid-template-columns:repeat(2,1fr);
       }
 
       .trust-grid{
@@ -666,10 +761,16 @@
       }
 
       h1{max-width:none}
+
+      .footer-links{
+        justify-items:start;
+      }
     }
 
     @media (max-width:760px){
-      .container{width:min(var(--max), calc(100% - 28px))}
+      .container{
+        width:min(var(--max), calc(100% - 28px));
+      }
 
       .header-grid{
         align-items:flex-start;
@@ -681,24 +782,34 @@
         gap:12px;
       }
 
-      .hero{padding:40px 0 18px}
-      .section{padding:56px 0}
-      .trust-grid{grid-template-columns:1fr}
+      .hero{
+        padding:40px 0 18px;
+      }
+
+      .section{
+        padding:58px 0;
+      }
+
+      .trust-grid,
+      .proof-grid{
+        grid-template-columns:1fr;
+      }
 
       .contact-line{
         flex-direction:column;
         align-items:flex-start;
       }
 
-      .contact-line a{text-align:left}
+      .contact-line a{
+        text-align:left;
+      }
 
       .cta-row{
         display:grid;
         grid-template-columns:1fr;
       }
 
-      .cta-row .btn,
-      .inline-actions .btn{
+      .cta-row .btn{
         width:100%;
       }
 
@@ -716,7 +827,9 @@
         height:28px;
       }
 
-      .floating-btn span{display:none}
+      .floating-btn span{
+        display:none;
+      }
     }
   </style>
 </head>
@@ -734,7 +847,7 @@
 
       <nav class="nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#why-us">Why us</a>
+        <a href="#proof">Project types</a>
         <a href="#compliance">Compliance</a>
         <a href="#coverage">Coverage</a>
         <a class="btn btn-small btn-nav" href="#contact">Contact</a>
@@ -748,24 +861,23 @@
         <div class="hero-copy">
           <span class="eyebrow">Construction sites • Welfare units • Builders cleans • Sparkle cleans</span>
 
-          <h1>Reliable cleaning support for contractors, developers and live construction sites.</h1>
+          <h1>Contractor-focused cleaning support for live sites and handover stages.</h1>
 
           <p class="lead">
-            Tom Maintenance provides <strong>construction site cleaning</strong>,
-            <strong>welfare unit cleaning</strong>, <strong>builders cleans</strong> and
-            <strong>sparkle cleans</strong> for <strong>housebuilders</strong>,
+            Tom Maintenance provides <strong>construction site cleaning</strong>, <strong>welfare unit cleaning</strong>,
+            <strong>builders cleans</strong> and <strong>sparkle cleans</strong> for <strong>housebuilders</strong>,
             <strong>main contractors</strong> and <strong>civils / infrastructure contractors</strong>.
           </p>
 
           <p class="lead">
-            We focus on practical site support, responsive communication and a contractor-first approach
-            that fits live environments, handover stages and site rules.
+            We support regional contractor requirements with clear communication, practical site awareness
+            and a straightforward approach to cleaning scope, attendance and project coordination.
           </p>
 
           <div class="cta-row">
-            <a class="btn" href="https://wa.me/447864007256?text=Hello%20Tom%20Maintenance%2C%20I%20would%20like%20to%20ask%20about%20site%20cleaning." target="_blank" rel="noopener noreferrer">WhatsApp enquiry</a>
-            <a class="btn btn-ghost" href="tel:+447864007256">Call 07864 007256</a>
-            <a class="btn btn-outline" href="#contact">Send project details</a>
+            <a class="btn" href="tel:+447864007256">Call 07864 007256</a>
+            <a class="btn btn-ghost" href="https://wa.me/447864007256?text=Hello%20Tom%20Maintenance%2C%20I%20would%20like%20to%20ask%20about%20site%20cleaning." target="_blank" rel="noopener noreferrer">WhatsApp enquiry</a>
+            <a class="btn btn-outline" href="#contact">Request availability</a>
           </div>
 
           <ul class="hero-points">
@@ -776,19 +888,19 @@
           </ul>
 
           <div class="hero-note">
-            <strong>Built for B2B construction work:</strong> site cleaning support, welfare hygiene,
-            plot / handover preparation and practical onboarding for contractor environments.
+            <strong>Built for B2B construction work:</strong> practical cleaning support for welfare areas,
+            live-site environments, plot preparation and pre-handover stages.
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Quick facts">
           <span class="eyebrow">Quick facts</span>
-          <h2>Contractor-facing cleaning support</h2>
+          <h2>Cleaner sites. Simpler contact. Contractor-facing service.</h2>
 
           <div class="facts">
             <div class="fact">
               <div class="fact-label">Core services</div>
-              <div class="fact-value">Site, welfare, builders & sparkle cleans</div>
+              <div class="fact-value">Site, welfare, builders and sparkle cleans</div>
             </div>
             <div class="fact">
               <div class="fact-label">Typical clients</div>
@@ -800,7 +912,7 @@
             </div>
             <div class="fact">
               <div class="fact-label">Coverage</div>
-              <div class="fact-value">Leicestershire & Midlands</div>
+              <div class="fact-value">Leicestershire and the Midlands</div>
             </div>
             <div class="fact">
               <div class="fact-label">Email</div>
@@ -809,32 +921,32 @@
           </div>
 
           <div class="hero-card-actions">
-            <a class="btn btn-block" href="https://wa.me/447864007256?text=Hello%20Tom%20Maintenance%2C%20I%20would%20like%20to%20ask%20about%20site%20cleaning." target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+            <a class="btn btn-block" href="#contact">Send project details</a>
             <button class="btn btn-outline btn-block" id="copyEmailBtn" type="button">Copy email address</button>
           </div>
 
-          <p class="helper">For a faster reply, send your site postcode, scope, frequency and preferred start date.</p>
+          <p class="helper">For a faster reply, send the site postcode, required cleaning scope, frequency and preferred start date.</p>
         </aside>
       </div>
     </section>
 
-    <section class="trust-bar">
+    <section class="trust-bar" aria-label="Trust signals">
       <div class="container trust-grid">
         <div class="trust-item">
-          <span class="trust-title">Contractor-only focus</span>
-          <span class="trust-text">Construction and site cleaning only</span>
+          <span class="trust-title">Contractor-only positioning</span>
+          <span class="trust-text">Construction and site cleaning only — no domestic work.</span>
         </div>
         <div class="trust-item">
           <span class="trust-title">Insurance in place</span>
-          <span class="trust-text">Public Liability Insurance £5 million</span>
+          <span class="trust-text">Public Liability Insurance £5 million.</span>
         </div>
         <div class="trust-item">
-          <span class="trust-title">Site paperwork approach</span>
-          <span class="trust-text">RAMS / COSHH information available per project scope</span>
+          <span class="trust-title">Project paperwork approach</span>
+          <span class="trust-text">RAMS and COSHH information available per project scope.</span>
         </div>
         <div class="trust-item">
-          <span class="trust-title">Operational area</span>
-          <span class="trust-text">Leicestershire and wider Midlands</span>
+          <span class="trust-title">Regional coverage</span>
+          <span class="trust-text">Leicestershire and wider Midlands contractor support.</span>
         </div>
       </div>
     </section>
@@ -843,10 +955,10 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Services</span>
-          <h2>Cleaning services aligned to real construction site needs</h2>
+          <h2>Cleaning services aligned to real construction site requirements</h2>
           <p>
-            We support live sites, welfare environments and handover stages with practical cleaning that
-            fits contractor expectations and site routines.
+            We focus on the work areas and project stages that matter most to contractors:
+            welfare hygiene, live-site presentation, plot preparation and pre-handover cleaning support.
           </p>
         </div>
 
@@ -890,14 +1002,49 @@
       </div>
     </section>
 
-    <section id="why-us" class="section section-alt">
+    <section id="proof" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Project types</span>
+          <h2>Practical support for the site environments contractors deal with every day</h2>
+          <p>
+            Our scope is built around the cleaning needs that affect presentation, site standards,
+            welfare conditions and readiness before inspection or handover.
+          </p>
+        </div>
+
+        <div class="proof-strip">
+          <h3>Typical project support</h3>
+          <div class="proof-grid">
+            <div class="proof-item">
+              <strong>Live construction sites</strong>
+              <span>Cleaning support for active work areas, access routes and shared site spaces.</span>
+            </div>
+            <div class="proof-item">
+              <strong>Welfare units</strong>
+              <span>Toilets, wash areas, canteens, drying rooms, offices and staff welfare areas.</span>
+            </div>
+            <div class="proof-item">
+              <strong>Plots before handover</strong>
+              <span>Builders cleans and sparkle cleans ahead of inspection, client visit or handover stage.</span>
+            </div>
+            <div class="proof-item">
+              <strong>Regional contractor support</strong>
+              <span>Suitable for smaller and regional contractor requirements across Leicestershire and the Midlands.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Why Tom Maintenance</span>
-          <h2>A practical fit for smaller, regional and growing contractor requirements</h2>
+          <h2>A practical fit for contractor-facing work, not domestic cleaning</h2>
           <p>
-            We are set up to support contractor environments with clear communication, responsive service
-            and a realistic understanding of site access, sequencing and standards.
+            The service is positioned specifically for construction environments, with a straightforward
+            focus on clear communication, practical attendance and project-relevant cleaning support.
           </p>
         </div>
 
@@ -905,10 +1052,10 @@
           <div class="panel panel-highlight">
             <h3>What clients need</h3>
             <ul class="ticks">
-              <li>Reliable attendance and clear communication</li>
+              <li>Reliable attendance and straightforward communication</li>
               <li>Cleaner welfare areas and better site presentation</li>
               <li>Practical support before inspections and handover</li>
-              <li>Contractor-facing, professional contact handling</li>
+              <li>Contact routes that are fast and simple to use</li>
               <li>No confusion with domestic cleaning services</li>
             </ul>
           </div>
@@ -919,7 +1066,7 @@
               <li>Scope reviewed before attendance</li>
               <li>Work aligned to site induction and rules</li>
               <li>RAMS and COSHH information prepared per project scope</li>
-              <li>PPE and site conduct aligned to task and site requirements</li>
+              <li>PPE aligned to task and site-specific requirements</li>
               <li>Availability confirmed against site postcode, timing and access</li>
             </ul>
           </div>
@@ -927,14 +1074,14 @@
       </div>
     </section>
 
-    <section id="compliance" class="section">
+    <section id="compliance" class="section section-alt">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Compliance & onboarding</span>
-          <h2>Set up for contractor conversations, site rules and project-specific requirements</h2>
+          <h2>Clear contractor-facing wording without overclaiming</h2>
           <p>
-            We avoid inflated claims and vague wording. Compliance information is handled clearly and in line
-            with the project scope, onboarding route and site-specific requirements.
+            Compliance information is presented in line with the project scope, onboarding route
+            and site-specific requirements. The aim is practical readiness, not inflated claims.
           </p>
         </div>
 
@@ -955,7 +1102,7 @@
             <ul class="ticks">
               <li>Site access and onboarding requirements reviewed per project</li>
               <li>Additional client or developer requirements assessed case by case</li>
-              <li>Compliance information available in support of onboarding discussions</li>
+              <li>Compliance / capability information available in support of onboarding discussions</li>
               <li>Completed items stated only where confirmed and documented</li>
               <li>Contractor and construction cleaning only</li>
             </ul>
@@ -964,13 +1111,12 @@
 
         <div class="compliance-note">
           <strong>Compliance / capability information available on request.</strong>
-          Final site access, induction steps, permit systems and project-specific onboarding requirements may vary
-          by contractor, developer and site.
+          Final site access steps, induction requirements, permit systems and project-specific onboarding items may vary by contractor, developer and site.
         </div>
       </div>
     </section>
 
-    <section id="coverage" class="section section-alt">
+    <section id="coverage" class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Coverage</span>
@@ -996,14 +1142,14 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Contact</span>
           <h2>Send the project details for availability and next steps</h2>
           <p>
-            Because there is no on-site form submit on this version, the cleanest contact route is WhatsApp,
-            phone or direct email with a prepared scope summary.
+            The quickest way to move forward is by phone, WhatsApp or direct email with the site postcode,
+            required scope, frequency and preferred start date.
           </p>
         </div>
 
@@ -1065,7 +1211,7 @@ Any site rules, induction or access requirements:</div>
 
             <div class="action-stack">
               <button class="btn btn-block" id="copyTemplateBtn" type="button">Copy enquiry template</button>
-              <a class="btn btn-ghost btn-block" id="emailTemplateLink" href="mailto:info@tommaintenance.co.uk?subject=Site%20cleaning%20enquiry&body=Company%20name%3A%0AContact%20name%3A%0APhone%3A%0AEmail%3A%0A%0ASite%20name%3A%0ASite%20postcode%3A%0A%0ARequired%20service%3A%0A-%20Construction%20site%20cleaning%20%2F%20Welfare%20unit%20cleaning%20%2F%20Builders%20clean%20%2F%20Sparkle%20clean%20%2F%20Mixed%20scope%0A%0AScope%20details%3A%0A%0AFrequency%3A%0APreferred%20start%20date%3A%0ASite%20hours%3A%0A%0AAny%20site%20rules%2C%20induction%20or%20access%20requirements%3A">Open email draft</a>
+              <a class="btn btn-ghost btn-block" href="mailto:info@tommaintenance.co.uk?subject=Site%20cleaning%20enquiry&body=Company%20name%3A%0AContact%20name%3A%0APhone%3A%0AEmail%3A%0A%0ASite%20name%3A%0ASite%20postcode%3A%0A%0ARequired%20service%3A%0A-%20Construction%20site%20cleaning%20%2F%20Welfare%20unit%20cleaning%20%2F%20Builders%20clean%20%2F%20Sparkle%20clean%20%2F%20Mixed%20scope%0A%0AScope%20details%3A%0A%0AFrequency%3A%0APreferred%20start%20date%3A%0ASite%20hours%3A%0A%0AAny%20site%20rules%2C%20induction%20or%20access%20requirements%3A">Open email draft</a>
               <a class="btn btn-outline btn-block" href="https://wa.me/447864007256?text=Hello%20Tom%20Maintenance%2C%20please%20see%20my%20site%20cleaning%20enquiry%20below.%0A%0ACompany%20name%3A%0AContact%20name%3A%0APhone%3A%0AEmail%3A%0A%0ASite%20name%3A%0ASite%20postcode%3A%0A%0ARequired%20service%3A%0A%0AScope%20details%3A%0A%0AFrequency%3A%0APreferred%20start%20date%3A%0ASite%20hours%3A%0A%0AAny%20site%20rules%2C%20induction%20or%20access%20requirements%3A" target="_blank" rel="noopener noreferrer">Open WhatsApp draft</a>
             </div>
 
@@ -1079,14 +1225,26 @@ Any site rules, induction or access requirements:</div>
                 Services: <strong style="color:var(--text);">Site cleaning, welfare cleaning, builders cleans, sparkle cleans</strong><br>
                 Coverage: <strong style="color:var(--text);">Leicestershire and Midlands</strong><br>
                 Insurance: <strong style="color:var(--text);">Public Liability Insurance £5 million</strong><br>
-                Email: <strong style="color:var(--text);">info@tommaintenance.co.uk</strong>
+                Email: <strong style="color:var(--text);">info@tommaintenance.co.uk</strong><br>
+                Phone: <strong style="color:var(--text);">07864 007256</strong>
               </p>
             </div>
           </div>
         </div>
 
         <footer class="footer">
-          <p>© <span id="year"></span> Tom Maintenance. Contractor and construction cleaning only.</p>
+          <div class="footer-grid">
+            <p>
+              © <span id="year"></span> Tom Maintenance. Contractor and construction cleaning only.<br>
+              Construction site cleaning, welfare unit cleaning, builders cleans and sparkle cleans for contractor-facing work.
+            </p>
+
+            <div class="footer-links">
+              <a href="mailto:info@tommaintenance.co.uk">info@tommaintenance.co.uk</a>
+              <a href="tel:+447864007256">07864 007256</a>
+              <a href="https://wa.me/447864007256" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </div>
         </footer>
       </div>
     </section>
