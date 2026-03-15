@@ -25,6 +25,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
   margin:0;
   font-family:var(--font);
@@ -139,33 +140,51 @@ button{font:inherit}
 }
 
 .btn:hover{transform:translateY(-1px)}
+
 .btn-small{
   min-height:40px;
   padding:10px 14px;
   border-radius:12px;
   font-size:14px;
 }
+
 .btn-nav{color:#071120 !important}
+
 .btn-ghost{
   background:rgba(255,255,255,.03);
   color:var(--text);
   border-color:var(--line);
   box-shadow:none;
 }
+
 .btn-ghost:hover{
   background:rgba(255,255,255,.05);
   border-color:var(--line-2);
 }
+
 .btn-outline{
   background:transparent;
   color:var(--brand);
   border-color:rgba(98,231,213,.30);
   box-shadow:none;
 }
+
 .btn-outline:hover{
   background:rgba(98,231,213,.06);
   border-color:rgba(98,231,213,.52);
 }
+
+.btn-whatsapp{
+  background:linear-gradient(135deg,var(--success),var(--success-2));
+  color:#ffffff;
+  border-color:transparent;
+  box-shadow:0 12px 24px rgba(18,140,126,.22);
+}
+
+.btn-whatsapp:hover{
+  box-shadow:0 16px 28px rgba(18,140,126,.28);
+}
+
 .btn-block{
   display:flex;
   width:100%;
@@ -212,6 +231,7 @@ h1{
 }
 
 .lead strong{color:var(--text)}
+
 .lead-small{
   font-size:15px;
   line-height:1.7;
@@ -617,6 +637,10 @@ h1{
   font-size:13px;
   font-weight:700;
   color:var(--brand);
+}
+
+.status-error{
+  color:#ff9c9c;
 }
 
 .mini{
