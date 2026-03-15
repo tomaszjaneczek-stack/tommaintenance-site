@@ -1,23 +1,18 @@
 :root{
   --bg:#08111f;
-  --bg2:#0c172a;
   --panel:#0f1c31;
-  --panel-soft:rgba(255,255,255,.04);
-  --panel-strong:rgba(255,255,255,.06);
   --text:#edf3ff;
   --muted:#b6c4e2;
   --muted-2:#8fa4cb;
   --brand:#61e7d5;
   --brand-2:#6aa9ff;
   --brand-dark:#081220;
-  --whatsapp:#25D366;
-  --whatsapp-dark:#128C7E;
   --line:rgba(255,255,255,.10);
   --line-strong:rgba(255,255,255,.14);
   --shadow:0 18px 40px rgba(0,0,0,.34);
   --shadow-soft:0 10px 24px rgba(0,0,0,.20);
-  --radius:20px;
-  --radius-sm:14px;
+  --whatsapp:#25D366;
+  --whatsapp-dark:#128C7E;
   --max:1180px;
   --font:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -43,11 +38,6 @@ body{
   line-height:1.5;
 }
 
-img{
-  max-width:100%;
-  display:block;
-}
-
 a{
   color:inherit;
 }
@@ -57,7 +47,6 @@ a{
   margin:0 auto;
 }
 
-/* HEADER */
 .site-header{
   position:sticky;
   top:0;
@@ -106,7 +95,6 @@ a{
 .brand-name{
   font-weight:800;
   font-size:16px;
-  letter-spacing:.1px;
 }
 
 .brand-tag{
@@ -127,7 +115,7 @@ a{
   color:var(--muted);
   font-size:14px;
   font-weight:600;
-  transition:color .18s ease, opacity .18s ease;
+  transition:color .18s ease;
 }
 
 .nav a:hover{
@@ -139,27 +127,20 @@ a{
   align-items:center;
   justify-content:center;
   text-align:center;
-  gap:8px;
   min-height:48px;
   padding:12px 18px;
   border-radius:14px;
   border:1px solid transparent;
   text-decoration:none;
   font-weight:800;
-  letter-spacing:.1px;
-  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease, color .18s ease;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
   background:linear-gradient(135deg, var(--brand), var(--brand-2));
   color:var(--brand-dark);
   box-shadow:0 12px 24px rgba(0,0,0,.24);
-  cursor:pointer;
 }
 
 .btn:hover{
   transform:translateY(-1px);
-}
-
-.btn:active{
-  transform:translateY(0);
 }
 
 .btn-small{
@@ -185,14 +166,16 @@ a{
   background:rgba(255,255,255,.05);
 }
 
-.btn-whatsapp{
-  background:linear-gradient(135deg, var(--whatsapp), var(--whatsapp-dark));
-  color:#ffffff;
-  border-color:transparent;
+.btn-outline{
+  background:transparent;
+  border:1px solid rgba(97,231,213,.30);
+  color:var(--brand);
+  box-shadow:none;
 }
 
-.btn-whatsapp:hover{
-  color:#ffffff;
+.btn-outline:hover{
+  border-color:rgba(97,231,213,.55);
+  background:rgba(97,231,213,.06);
 }
 
 .btn-block{
@@ -200,11 +183,6 @@ a{
   width:100%;
 }
 
-.contact-whatsapp{
-  margin-top:12px;
-}
-
-/* HERO */
 .hero{
   padding:56px 0 26px;
 }
@@ -220,7 +198,6 @@ a{
 .eyebrow{
   display:inline-flex;
   align-items:center;
-  gap:8px;
   padding:8px 12px;
   border-radius:999px;
   border:1px solid var(--line);
@@ -228,7 +205,6 @@ a{
   color:var(--muted);
   font-size:13px;
   font-weight:700;
-  letter-spacing:.15px;
 }
 
 h1{
@@ -251,10 +227,6 @@ h1{
   color:var(--text);
 }
 
-.lead-second{
-  margin-bottom:0;
-}
-
 .cta-row{
   display:flex;
   gap:12px;
@@ -268,7 +240,6 @@ h1{
   list-style:none;
   display:grid;
   gap:10px;
-  max-width:700px;
 }
 
 .hero-bullets li{
@@ -316,22 +287,10 @@ h1{
   box-shadow:var(--shadow);
 }
 
-.hero-card::after{
-  content:"";
-  position:absolute;
-  inset:auto -40px -40px auto;
-  width:180px;
-  height:180px;
-  border-radius:999px;
-  background:radial-gradient(circle, rgba(106,169,255,.20), transparent 65%);
-  pointer-events:none;
-}
-
 .hero-card-top h2{
   margin:8px 0 0;
   font-size:24px;
   line-height:1.15;
-  letter-spacing:-.5px;
 }
 
 .facts{
@@ -343,7 +302,7 @@ h1{
 .fact{
   display:grid;
   gap:6px;
-  padding:14px 14px;
+  padding:14px;
   border-radius:16px;
   border:1px solid rgba(255,255,255,.08);
   background:rgba(0,0,0,.16);
@@ -364,14 +323,19 @@ h1{
   line-height:1.45;
 }
 
+.fact-value a{
+  color:var(--brand);
+  text-decoration:none;
+}
+
+.fact-value a:hover{
+  text-decoration:underline;
+}
+
 .hero-card-actions{
   display:grid;
   gap:10px;
   margin-top:18px;
-}
-
-.hero-small{
-  margin-top:14px;
 }
 
 .small{
@@ -383,7 +347,10 @@ h1{
   color:var(--muted);
 }
 
-/* TRUST BAR */
+.hero-small{
+  margin-top:14px;
+}
+
 .trust-bar{
   padding:4px 0 14px;
 }
@@ -416,7 +383,6 @@ h1{
   line-height:1.55;
 }
 
-/* SECTIONS */
 .section{
   padding:72px 0;
 }
@@ -446,7 +412,6 @@ h1{
   font-size:16px;
 }
 
-/* CARDS */
 .cards{
   display:grid;
   gap:18px;
@@ -476,11 +441,6 @@ h1{
   margin:0 0 12px;
   font-size:21px;
   line-height:1.2;
-  letter-spacing:-.3px;
-}
-
-.service-card{
-  position:relative;
 }
 
 .card-icon{
@@ -553,7 +513,6 @@ h1{
   line-height:1.7;
 }
 
-/* COVERAGE */
 .coverage{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -566,15 +525,10 @@ h1{
   line-height:1.7;
 }
 
-/* CONTACT */
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:18px;
-}
-
-.contact-panel{
-  min-height:100%;
 }
 
 .contact-line{
@@ -632,25 +586,69 @@ h1{
   margin:0;
 }
 
-/* RESPONSIVE */
+.floating-whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:200;
+  width:64px;
+  height:64px;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--whatsapp), var(--whatsapp-dark));
+  box-shadow:0 16px 34px rgba(0,0,0,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-decoration:none;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.floating-whatsapp:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 20px 40px rgba(0,0,0,.40);
+}
+
+.floating-whatsapp svg{
+  width:30px;
+  height:30px;
+  fill:currentColor;
+}
+
+.floating-whatsapp span{
+  position:absolute;
+  right:76px;
+  white-space:nowrap;
+  background:rgba(7,17,31,.92);
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.08);
+  opacity:0;
+  transform:translateX(8px);
+  pointer-events:none;
+  transition:opacity .2s ease, transform .2s ease;
+}
+
+.floating-whatsapp:hover span{
+  opacity:1;
+  transform:translateX(0);
+}
+
 @media (max-width: 1080px){
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  .trust-grid{
-    grid-template-columns:repeat(2, 1fr);
-  }
-
-  .cards-3{
-    grid-template-columns:1fr;
-  }
-
+  .hero-grid,
+  .cards-3,
   .cards-2,
   .grid-2,
   .coverage,
   .contact-grid{
     grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2, 1fr);
   }
 
   h1{
@@ -671,10 +669,6 @@ h1{
   .nav{
     width:100%;
     gap:12px;
-  }
-
-  .nav a{
-    font-size:13px;
   }
 
   .hero{
@@ -705,5 +699,21 @@ h1{
 
   .cta-row .btn{
     width:100%;
+  }
+
+  .floating-whatsapp{
+    width:58px;
+    height:58px;
+    right:16px;
+    bottom:16px;
+  }
+
+  .floating-whatsapp svg{
+    width:28px;
+    height:28px;
+  }
+
+  .floating-whatsapp span{
+    display:none;
   }
 }
