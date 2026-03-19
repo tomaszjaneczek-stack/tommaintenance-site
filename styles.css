@@ -851,4 +851,42 @@ h1{
   .floating-btn span{
     display:none;
   }
+}/* ── PDF CTA block ── */
+.pdf-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:22px;
+  padding:20px 24px;
+  border-radius:20px;
+  border:1px solid rgba(109,169,255,.22);
+  background:linear-gradient(180deg, rgba(109,169,255,.08), rgba(255,255,255,.02));
+}
+
+.pdf-cta-text{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.pdf-cta-text strong{
+  color:var(--text);
+  font-size:15px;
+}
+
+.pdf-cta-text span{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+@media(max-width:760px){
+  .pdf-cta{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .pdf-cta .btn{
+    width:100%;
+  }
 }
